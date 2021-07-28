@@ -8,9 +8,9 @@ db.people.aggregate( [
     { $group: { 
       _id: { age: '$age' },         // group by 'age'
       names: { $push: "$name" } } },// push all people by the same age
-      { $project: {
-        names: { 
-          $slice: ['$names', 0, 10] // limit the number of values inside the array
+    { $project: {
+      names: { 
+        $slice: ['$names', 0, 10] // limit the number of values inside the array
 } } } ] );
 
 //==============================================================================
@@ -38,7 +38,7 @@ db.people.aggregate(
 // ACCULUMATOR OPERATOR: $addToSet
 // OTHERS OPERATORS: 
 // DESCRIPTION: gruppo i documenti in base al giorno e anno, e con $addToSet aggiungo il 
-// valore di 'item'degli oggetti che hanno quegli specifici _id
+// valore di 'item' degli oggetti che hanno quegli specifici _id
 db.sales.aggregate( [
     { $group: {
       _id: { day: { $dayOfYear: '$date' },
