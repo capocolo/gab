@@ -1,0 +1,21 @@
+/* TAG SELECTORS */
+
+body { 
+  background-color: aliceblue
+}
+
+/* CLASS SELECTORS */
+
+.table {
+  background-color: aqua;
+}
+
+.fire:hover {
+  background-color: bisque;
+}
+
+/* ID SELECTORS */
+
+#header {
+  color:brown;
+}
